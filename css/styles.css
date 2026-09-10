@@ -124,19 +124,19 @@ nav .clock {
 }
 
 .avatar {
-  width: 180px;
-  height: 180px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--mint);
   flex-shrink: 0;
   order: 2;
-  box-shadow: 0 0 28px rgba(110, 231, 183, 0.35);
+  box-shadow: 0 0 48px rgba(110, 231, 183, 0.5);
   transition: all 0.3s ease;
 }
 
 .avatar:hover {
-  box-shadow: 0 0 42px rgba(110, 231, 183, 0.7);
+  box-shadow: 0 0 52px rgba(110, 231, 183, 0.75);
   border-color: var(--amber);
 }
 
@@ -153,8 +153,8 @@ nav .clock {
   }
 
   .avatar {
-    width: 128px;
-    height: 128px;
+    width: 140px;
+    height: 140px;
   }
 }
 
