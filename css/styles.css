@@ -124,19 +124,18 @@ nav .clock {
 }
 
 .avatar {
-  width: 300px;
-  height: 300px;
+  width: 340px;
+  height: 340px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid var(--mint);
+  border: 3px solid var(--mint);
   flex-shrink: 0;
   order: 2;
-  box-shadow: 0 0 48px rgba(110, 231, 183, 0.5);
   transition: all 0.3s ease;
 }
 
 .avatar:hover {
-  box-shadow: 0 0 52px rgba(110, 231, 183, 0.75);
+  box-shadow: 0 0 0 4px var(--amber);
   border-color: var(--amber);
 }
 
