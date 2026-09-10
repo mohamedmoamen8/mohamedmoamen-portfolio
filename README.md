@@ -9,18 +9,19 @@ A modern, interactive portfolio website built with clean HTML, CSS, and JavaScri
 - **Accordion Timeline** - Click to expand experience & education details
 - **Joke Generator** - Random git commit messages for entertainment
 - **Easter Egg** - Try the Konami code for a surprise!
-- **Optimized Avatar** - Using GitHub profile picture with enhanced styling
+- **Custom Avatar** - Personalized avatar image with enhanced styling
 
 ## 📁 Project Structure
 
 ```
-├── index.html          # Main HTML file
+├── index.html                    # Main HTML file
 ├── css/
-│   └── styles.css      # All styling
+│   └── styles.css               # All styling
 ├── js/
-│   └── script.js       # All interactivity
-├── assets/            # (Future) For images and media
-└── README.md          # This file
+│   └── script.js                # All interactivity
+├── assets/                       # Images and media
+│   └── avatar.jpeg              # Profile avatar image
+└── README.md                     # This file
 ```
 
 ## 🚀 Getting Started
@@ -41,9 +42,11 @@ Edit the CSS variables in `css/styles.css`:
 ```
 
 ### Avatar
-Change the avatar image in `index.html`:
+Replace the avatar image in the `assets/` folder:
+1. Add your avatar image to `assets/avatar.jpeg`
+2. Update the image reference in `index.html`:
 ```html
-<img src="https://your-image-url.jpg" alt="Your Name" class="avatar" />
+<img src="assets/avatar.jpeg" alt="Your Name" class="avatar" />
 ```
 
 ### Content
