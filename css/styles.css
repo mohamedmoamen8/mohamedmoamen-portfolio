@@ -120,23 +120,23 @@ nav .clock {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 28px;
+  gap: 36px;
 }
 
 .avatar {
-  width: 132px;
-  height: 132px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--mint);
   flex-shrink: 0;
   order: 2;
-  box-shadow: 0 0 20px rgba(110, 231, 183, 0.3);
+  box-shadow: 0 0 28px rgba(110, 231, 183, 0.35);
   transition: all 0.3s ease;
 }
 
 .avatar:hover {
-  box-shadow: 0 0 30px rgba(110, 231, 183, 0.6);
+  box-shadow: 0 0 42px rgba(110, 231, 183, 0.7);
   border-color: var(--amber);
 }
 
@@ -149,12 +149,12 @@ nav .clock {
   .hero-id {
     flex-direction: column-reverse;
     align-items: flex-start;
-    gap: 18px;
+    gap: 20px;
   }
 
   .avatar {
-    width: 96px;
-    height: 96px;
+    width: 128px;
+    height: 128px;
   }
 }
 
