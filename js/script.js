@@ -7,7 +7,7 @@ function tick() {
 }
 
 tick();
-setInterval(tick, 1000 * 30);
+setInterval(tick, 1000);
 
 // Hero typing animation
 const typedEl = document.getElementById('typed');
@@ -75,7 +75,10 @@ const commands = {
   skills: () => 'Node.js, NestJS, Express, TypeScript, PostgreSQL, MongoDB, JWT auth, GraphQL, Docker (fundamentals).',
   projects: () => 'Gym Management System · BizFlow · Social Media App Backend — see the projects section above.',
   coffee: () => '☕ brewing... backend developers run on this and stack traces.',
-  'sudo hire-me': () => '[sudo] password for recruiter: ******** \nPermission granted. Redirecting to mailto:mohamedmoamen272@gmail.com',
+  'sudo hire-me': () => {
+    window.location.href = 'mailto:mohamedmoamen272@gmail.com';
+    return null;
+  },
   joke: () => pickJoke(),
   clear: () => {
     shellBody.innerHTML = '';
@@ -140,3 +143,41 @@ window.addEventListener('keydown', (e) => {
     progress = (key === konami[0]) ? 1 : 0;
   }
 });
+
+// Contact form feedback
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = contactForm.querySelector('button');
+    const originalText = btn.textContent;
+    btn.textContent = 'sent!';
+    btn.style.background = 'var(--mint)';
+    btn.style.color = '#0a0c11';
+    setTimeout(() => {
+      btn.textContent = originalText;
+      btn.style.background = '';
+      btn.style.color = '';
+      contactForm.reset();
+    }, 2000);
+  });
+}
+
+// Active nav state
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('nav ul a');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => {
+        link.style.color = '';
+        if (link.getAttribute('href') === '#' + entry.target.id) {
+          link.style.color = 'var(--text)';
+        }
+      });
+    }
+  });
+}, { rootMargin: '-20% 0px -70% 0px' });
+
+sections.forEach(section => observer.observe(section));

@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mohamed Moamen — Software Engineer · Backend Developer</title>
   <meta name="description" content="Mohamed Moamen, software engineer focused on backend development — Node.js APIs, systems, and the occasional terminal joke." />
+  <meta property="og:title" content="Mohamed Moamen — Software Engineer · Backend Developer" />
+  <meta property="og:description" content="Mohamed Moamen, software engineer focused on backend development — Node.js APIs, systems, and the occasional terminal joke." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mohamedmoamen.dev" />
+  <meta property="og:image" content="https://mohamedmoamen.dev/assets/avatar.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
@@ -28,10 +36,10 @@
 
 <main id="top">
   <div class="wrap">
-    <section class="hero" style="border-top:none; padding-top:76px;">
+    <section class="hero hero-main">
       <p class="kicker">// software engineer · backend developer, cairo</p>
       <div class="hero-id">
-        <img src="assets/avatar.jpeg"  class="avatar" />
+        <img src="assets/avatar.jpeg" alt="Mohamed Moamen avatar" class="avatar" />
         <h1>Mohamed Moamen builds backends that don't wake you up at 3am.</h1>
       </div>
       <p class="lede">Computer Science graduate focused on Node.js, NestJS, and TypeScript — REST APIs, auth systems, and databases that hold their shape under load. Currently looking for internships and entry-level backend roles.</p>
@@ -275,7 +283,7 @@
     <section id="shell">
       <h2 class="section-title">shell — try it</h2>
       <p class="hint-row">a tiny interactive terminal. type <code>help</code> to see what it knows.</p>
-      <div class="terminal" style="margin-top:0;">
+      <div class="terminal terminal-compact">
         <div class="bar">
           <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
           <span class="title">guest@mohamed-portfolio: ~</span>
@@ -283,7 +291,7 @@
         <div class="body" id="shell-body">
           <p class="line out">Type <span class="prompt">help</span> to get started. Yes, this is a real input field. No, it does not connect to a real server. Mostly.</p>
         </div>
-        <div class="wrap" style="padding:0 16px 16px;">
+        <div class="wrap wrap-compact">
           <form id="shell-form">
             <span class="prompt-static">$</span>
             <input id="shell-input" type="text" autocomplete="off" placeholder="whoami" />

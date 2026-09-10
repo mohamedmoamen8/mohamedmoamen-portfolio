@@ -38,10 +38,22 @@ a {
   color: inherit;
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--mint);
+  outline-offset: 2px;
+}
+
 .wrap {
   max-width: 760px;
   margin: 0 auto;
   padding: 0 28px;
+}
+
+.wrap-compact {
+  padding: 0 16px 16px;
 }
 
 /* NAV */
@@ -107,6 +119,11 @@ nav .clock {
 /* HERO */
 .hero {
   padding: 76px 0 48px;
+}
+
+.hero-main {
+  border-top: none;
+  padding-top: 76px;
 }
 
 .hero .kicker {
@@ -203,6 +220,10 @@ nav .clock {
   box-shadow: 0 20px 50px -25px rgba(0, 0, 0, 0.6);
 }
 
+.terminal-compact {
+  margin-top: 0;
+}
+
 .terminal .bar {
   display: flex;
   align-items: center;
@@ -290,6 +311,7 @@ nav .clock {
 section {
   padding: 56px 0;
   border-top: 1px solid var(--line);
+  scroll-margin-top: 70px;
 }
 
 h2.section-title {
