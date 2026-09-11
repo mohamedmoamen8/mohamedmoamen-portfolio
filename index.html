@@ -90,7 +90,8 @@
               <span class="title">guest@mohamed-portfolio: send-message</span>
             </div>
             <div class="body">
-              <form class="contact-form" id="contact-form">
+              <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="6974a796-1e10-4d79-a2d5-e03e39abe7c5" />
                 <div class="line"><span class="prompt">$</span> <span class="prompt-label">name</span> <input type="text" name="name" required placeholder="your name" autocomplete="off" /></div>
                 <div class="line"><span class="prompt">$</span> <span class="prompt-label">email</span> <input type="email" name="email" required placeholder="you@example.com" autocomplete="off" /></div>
                 <div class="line"><span class="prompt">$</span> <span class="prompt-label">message</span> <textarea name="message" rows="4" required placeholder="type your message here..."></textarea></div>

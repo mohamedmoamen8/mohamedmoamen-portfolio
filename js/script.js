@@ -147,19 +147,40 @@ window.addEventListener('keydown', (e) => {
 // Contact form feedback
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = contactForm.querySelector('button');
     const originalText = btn.textContent;
-    btn.textContent = 'sent!';
-    btn.style.background = 'var(--mint)';
-    btn.style.color = '#0a0c11';
-    setTimeout(() => {
-      btn.textContent = originalText;
-      btn.style.background = '';
-      btn.style.color = '';
-      contactForm.reset();
-    }, 2000);
+    btn.disabled = true;
+    btn.textContent = 'sending…';
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: new FormData(contactForm)
+      });
+      const data = await response.json();
+      if (data.success) {
+        btn.textContent = 'sent!';
+        btn.style.background = 'var(--mint)';
+        btn.style.color = '#0a0c11';
+        contactForm.reset();
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.style.background = '';
+          btn.style.color = '';
+        }, 2000);
+      } else {
+        throw new Error(data.message || 'Submission failed');
+      }
+    } catch (err) {
+      btn.textContent = 'failed — try again';
+      setTimeout(() => {
+        btn.textContent = originalText;
+      }, 3000);
+    } finally {
+      btn.disabled = false;
+    }
   });
 }
 
